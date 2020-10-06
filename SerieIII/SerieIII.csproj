@@ -5,4 +5,17 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <ProjectReference Include="..\Huffman\Huffman.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Repository\FileCompressDataBase.cs">
+      <Link>Repository\FileCompressDataBase.cs</Link>
+    </Compile>
+  </ItemGroup>
 </Project>
