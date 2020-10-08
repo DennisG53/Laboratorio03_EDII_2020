@@ -9,7 +9,6 @@
     <ProjectReference Include="..\Huffman\Huffman.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\SerieII\SerieII.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />

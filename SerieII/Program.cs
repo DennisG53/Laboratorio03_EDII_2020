@@ -1,4 +1,7 @@
 ﻿using System;
+using SerieII;
+using SerieIII;
+using Huffman;
 
 namespace SerieII
 {
@@ -6,7 +9,9 @@ namespace SerieII
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            public Huffman.Huffman hf = new Huffman.Huffman();
+
+
     }
+}
 }
