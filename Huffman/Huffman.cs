@@ -45,8 +45,7 @@ namespace Huffman
         //Public Functions
 
         //method for compress file
-        public void Compress
-            (string rPath, string wPath)
+        public void Compress(string rPath, string wPath)
         {
             int BitsToRead = 0;
             double charcount = 0.0;
@@ -72,8 +71,7 @@ namespace Huffman
         }
 
         //method to know the value the rc,fc and pr
-        public string GetFilesMetrics
-            (string Name, string Original, string Compresed)
+        public string GetFilesMetrics(string Name, string Original, string Compresed)
         {
             string Metrics = Name.Replace(".txt", "") + '|';
             double RC, FC, PR;
@@ -249,7 +247,7 @@ namespace Huffman
 
         //----------------------------------------- UNCOMPRESS -----------------------------------------
         //method for uncompress file
-        public string uncompress(string path)
+        public void uncompress(string path, string wpath)
         {
             string fullfile = "";
             Dictionary<char, Byte[]> dictionary = new Dictionary<char, Byte[]>();
@@ -286,7 +284,10 @@ namespace Huffman
 
             }
 
-            return fullfile;
+            using (StreamWriter writer = new StreamWriter(wpath))
+            {
+                writer.WriteLine(fullfile);
+            }
         }
 
 
@@ -431,8 +432,8 @@ namespace Huffman
 
         //END PRIVATE FUNCTION UNCOMPRESS
 
-
     }
+
 
 }
 

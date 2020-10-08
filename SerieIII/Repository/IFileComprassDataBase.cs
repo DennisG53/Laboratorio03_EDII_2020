@@ -6,7 +6,7 @@ using Huffman;
 
 namespace LABREPO_ED2.Repository
 {
-    interface IFileComprassDataBase
+    public interface IFileComprassDataBase
     {
         Stack<FileCompress> GetFiles();
 
